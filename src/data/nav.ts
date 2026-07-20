@@ -2,7 +2,6 @@ import type { LocalizedString } from "@/lib/i18n";
 
 export const navLinks: { id: string; label: LocalizedString }[] = [
   { id: "home", label: { zh: "首页", en: "Home" } },
-  { id: "about", label: { zh: "关于", en: "About" } },
   { id: "skills", label: { zh: "技能", en: "Skills" } },
   { id: "projects", label: { zh: "项目", en: "Projects" } },
   { id: "experience", label: { zh: "经历", en: "Experience" } },
@@ -11,10 +10,6 @@ export const navLinks: { id: string; label: LocalizedString }[] = [
 
 /** Reusable section headings. */
 export const sections = {
-  about: {
-    kicker: { zh: "关于我", en: "About" },
-    title: { zh: "我是谁", en: "Who I am" },
-  },
   skills: {
     kicker: { zh: "技术栈", en: "Tech Stack" },
     title: { zh: "我能做什么", en: "What I work with" },

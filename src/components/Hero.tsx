@@ -146,7 +146,7 @@ export default function Hero() {
       </div>
 
       <a
-        href="#about"
+        href="#skills"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted/60 transition-colors hover:text-foreground"
         aria-label="Scroll down"
       >

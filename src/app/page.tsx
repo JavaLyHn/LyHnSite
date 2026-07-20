@@ -3,7 +3,6 @@ import Navbar from "@/components/Navbar";
 import Spotlight from "@/components/Spotlight";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
-import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
@@ -19,7 +18,6 @@ export default function Home() {
       <main>
         <Hero />
         <Marquee />
-        <About />
         <Skills />
         <Projects />
         <Experience />
