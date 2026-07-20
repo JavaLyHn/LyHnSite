@@ -44,7 +44,9 @@ html {
 }
 
 body {
-  background: var(--bg);
+  background:
+    radial-gradient(130% 90% at 50% -10%, #0d0d20 0%, #08081400 45%),
+    var(--bg);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
   overflow-x: hidden;
@@ -177,6 +179,64 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shimmer 4s linear infinite;
+}
+
+/* ============================================================
+   Global ambient background (fixed, behind everything)
+   ============================================================ */
+.site-glow {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(130px);
+  will-change: transform;
+}
+.site-glow-a {
+  top: -12%;
+  left: -8%;
+  width: 42rem;
+  height: 42rem;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.30), transparent 70%);
+  animation: drift 24s ease-in-out infinite;
+}
+.site-glow-b {
+  top: 32%;
+  right: -12%;
+  width: 40rem;
+  height: 40rem;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.22), transparent 70%);
+  animation: drift 30s ease-in-out infinite reverse;
+}
+.site-glow-c {
+  bottom: -14%;
+  left: 24%;
+  width: 40rem;
+  height: 40rem;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.20), transparent 70%);
+  animation: drift 34s ease-in-out infinite;
+}
+.site-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  -webkit-mask-image: radial-gradient(ellipse 120% 90% at 50% 0%, #000 20%, transparent 75%);
+  mask-image: radial-gradient(ellipse 120% 90% at 50% 0%, #000 20%, transparent 75%);
+  opacity: 0.6;
+}
+.site-grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Blinking terminal cursor */
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.cursor-blink {
+  animation: blink 1.05s step-end infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {

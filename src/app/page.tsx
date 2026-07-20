@@ -1,3 +1,4 @@
+import SiteBackground from "@/components/SiteBackground";
 import Navbar from "@/components/Navbar";
 import Spotlight from "@/components/Spotlight";
 import Hero from "@/components/Hero";
@@ -12,6 +13,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
+      <SiteBackground />
       <Spotlight />
       <Navbar />
       <main>
