@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Star } from "lucide-react";
 import { GithubIcon } from "./BrandIcons";
 import { useI18n } from "@/lib/i18n";
 import {
@@ -12,6 +12,7 @@ import {
   type ProjectCategory,
 } from "@/data/projects";
 import { sections } from "@/data/nav";
+import { profile } from "@/data/profile";
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
 import TiltCard from "./TiltCard";
@@ -33,7 +34,15 @@ function ProjectCard({ project, big }: { project: Project; big: boolean }) {
           <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs uppercase tracking-wider text-muted">
             {project.category}
           </span>
-          <span className="font-mono text-xs text-muted">{project.year}</span>
+          <div className="flex items-center gap-3">
+            {typeof project.stars === "number" && project.stars > 0 && (
+              <span className="inline-flex items-center gap-1 font-mono text-xs text-amber-300/90">
+                <Star className="h-3.5 w-3.5 fill-amber-300/90" />
+                {project.stars}
+              </span>
+            )}
+            <span className="font-mono text-xs text-muted">{project.year}</span>
+          </div>
         </div>
 
         <h3 className={`font-bold ${big ? "text-2xl" : "text-xl"}`}>
@@ -160,6 +169,19 @@ export default function Projects() {
           ))}
         </AnimatePresence>
       </motion.div>
+
+      <Reveal className="mt-12 flex justify-center">
+        <a
+          href={`${profile.contacts.github}?tab=repositories`}
+          target="_blank"
+          rel="noreferrer"
+          className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-white/5"
+        >
+          <GithubIcon className="h-4 w-4" />
+          {t({ zh: "在 GitHub 查看全部项目", en: "View all projects on GitHub" })}
+          <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        </a>
+      </Reveal>
     </section>
   );
 }

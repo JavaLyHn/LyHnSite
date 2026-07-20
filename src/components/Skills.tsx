@@ -1,6 +1,6 @@
 "use client";
 
-import { BrainCircuit, Cloud, MonitorSmartphone, Server, type LucideIcon } from "lucide-react";
+import { BrainCircuit, Cpu, MonitorSmartphone, Server, type LucideIcon } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { skillCategories } from "@/data/skills";
 import { sections } from "@/data/nav";
@@ -11,7 +11,7 @@ const iconMap: Record<string, LucideIcon> = {
   BrainCircuit,
   MonitorSmartphone,
   Server,
-  Cloud,
+  Cpu,
 };
 
 export default function Skills() {

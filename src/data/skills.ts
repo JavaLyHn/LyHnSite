@@ -8,8 +8,9 @@ export interface SkillCategory {
 }
 
 /**
- * 技能矩阵 —— 按领域分组。新增技能直接往 items 里加字符串即可。
- * Skill matrix grouped by domain. Add a string to `items` to add a skill.
+ * 技能矩阵 —— 覆盖真实项目中用到的技术。
+ * Skill matrix reflecting the tech actually used across the projects.
+ * 新增技能直接往 items 里加字符串即可。
  */
 export const skillCategories: SkillCategory[] = [
   {
@@ -20,70 +21,73 @@ export const skillCategories: SkillCategory[] = [
       en: "Productionizing model capabilities",
     },
     items: [
-      "OpenAI / Claude / Gemini",
-      "LangChain / LlamaIndex",
-      "RAG / Vector DB",
-      "Agent / Function Calling",
-      "Fine-tuning / LoRA",
-      "Prompt Engineering",
-      "vLLM / Ollama",
-      "Hugging Face",
+      "Claude / GPT / DeepSeek / Qwen",
+      "LangGraph / LangGraph4j / Spring AI",
+      "RAG (Agentic · Modular · Hybrid)",
+      "Multi-Agent 编排",
+      "MCP · Function Calling",
+      "Embeddings · Rerank (bge / JinaCLIP)",
+      "LLM-as-Judge 评测",
+      "Langfuse 可观测",
     ],
   },
   {
-    title: { zh: "前端", en: "Frontend" },
+    title: { zh: "前端 / 可视化", en: "Frontend / Visual" },
     icon: "MonitorSmartphone",
     blurb: {
-      zh: "高性能、可访问、可维护的界面",
-      en: "Fast, accessible, maintainable UIs",
+      zh: "高性能界面与图形可视化",
+      en: "Fast UIs and graphics",
     },
     items: [
-      "React / Next.js",
+      "React 19 / Next.js 16",
       "TypeScript",
       "Tailwind CSS",
+      "Vue 3",
+      "Three.js / WebGL / GLSL",
       "Framer Motion",
-      "Three.js / WebGL",
-      "Zustand / Redux",
-      "Vite",
+      "ReactFlow · Zustand",
+      "SwiftUI · WXT 扩展",
     ],
   },
   {
-    title: { zh: "后端", en: "Backend" },
+    title: { zh: "后端 / 分布式", en: "Backend / Distributed" },
     icon: "Server",
     blurb: {
-      zh: "可扩展的服务与 API",
-      en: "Scalable services & APIs",
+      zh: "可扩展的服务与微服务架构",
+      en: "Scalable services & microservices",
     },
     items: [
-      "Node.js / NestJS",
+      "Java 21 / Spring Boot / Spring Cloud",
       "Python / FastAPI",
-      "PostgreSQL / Redis",
-      "GraphQL / tRPC",
-      "WebSocket / SSE",
-      "Message Queues",
+      "Node.js · Electron",
+      "PostgreSQL / MySQL",
+      "Redis · Kafka · MinIO",
+      "Elasticsearch · Qdrant",
+      "WebSocket / SSE 流式",
     ],
   },
   {
-    title: { zh: "工程化 / 部署", en: "DevOps" },
-    icon: "Cloud",
+    title: { zh: "系统 / 工程", en: "Systems / Engineering" },
+    icon: "Cpu",
     blurb: {
-      zh: "从本地到云端的交付链路",
-      en: "From localhost to the cloud",
+      zh: "底层功底与交付工程",
+      en: "Low-level depth & delivery",
     },
     items: [
-      "Docker / K8s",
-      "Vercel / AWS",
-      "CI/CD",
-      "Serverless",
-      "Monitoring",
-      "Cloudflare",
+      "Docker / 微服务 (Nacos · Sentinel · Seata)",
+      "Rust",
+      "零知识证明 · Halo2",
+      "数据库内核 (MVCC · B+Tree · WAL)",
+      "Prometheus / Grafana",
+      "CI/CD · Vercel",
     ],
   },
 ];
 
 /** 首屏滚动的技术栈跑马灯。 */
 export const marqueeTech = [
-  "Next.js", "React", "TypeScript", "Python", "FastAPI", "Node.js",
-  "LangChain", "OpenAI", "Claude", "RAG", "PostgreSQL", "Redis",
-  "Docker", "Kubernetes", "Vercel", "AWS", "Tailwind", "Three.js",
+  "Next.js", "React", "TypeScript", "Vue", "Java", "Spring Cloud",
+  "Python", "FastAPI", "LangGraph", "Claude", "RAG", "Multi-Agent",
+  "MCP", "Qdrant", "Elasticsearch", "PostgreSQL", "Redis", "Kafka",
+  "Three.js", "Rust", "Halo2", "Electron", "Docker", "SwiftUI",
 ];
