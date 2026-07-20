@@ -7,7 +7,7 @@ import { useI18n } from "@/lib/i18n";
 import { profile } from "@/data/profile";
 import NeuralBackground from "./NeuralBackground";
 import Counter from "./Counter";
-import { GithubIcon, LinkedinIcon } from "./BrandIcons";
+import { GithubIcon } from "./BrandIcons";
 
 export default function Hero() {
   const { t } = useI18n();
@@ -112,7 +112,6 @@ export default function Hero() {
             {[
               { href: `mailto:${profile.contacts.email}`, Icon: Mail },
               { href: profile.contacts.github, Icon: GithubIcon },
-              { href: profile.contacts.linkedin, Icon: LinkedinIcon },
             ].map(({ href, Icon }, i) => (
               <a
                 key={i}

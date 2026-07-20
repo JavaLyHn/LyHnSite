@@ -22,7 +22,7 @@ npm run start    # 本地预览生产版本
 
 | 文件 | 改什么 |
 | --- | --- |
-| `src/data/profile.ts` | 姓名、头衔、简介、首屏数据、联系方式（邮箱 / GitHub / LinkedIn / 简历链接） |
+| `src/data/profile.ts` | 姓名、头衔、简介、首屏数据、联系方式（邮箱 / GitHub / 简历链接） |
 | `src/data/projects.ts` | **项目列表**（你最常改的）。复制任意一项改 `id`/内容/`stack`/`links` 即可新增；`featured: true` 会以大卡片展示 |
 | `src/data/skills.ts` | 技能矩阵（按领域分组）+ 首屏跑马灯关键词 |
 | `src/data/experience.ts` | 工作 / 项目经历时间线 |

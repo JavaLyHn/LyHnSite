@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowUpRight, Mail } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "./BrandIcons";
+import { GithubIcon } from "./BrandIcons";
 import { useI18n } from "@/lib/i18n";
 import { profile } from "@/data/profile";
 import { sections } from "@/data/nav";
@@ -13,7 +13,6 @@ export default function Contact() {
   const channels = [
     { Icon: Mail, label: "Email", value: profile.contacts.email, href: `mailto:${profile.contacts.email}` },
     { Icon: GithubIcon, label: "GitHub", value: "@JavaLyHn", href: profile.contacts.github },
-    { Icon: LinkedinIcon, label: "LinkedIn", value: "in/your-handle", href: profile.contacts.linkedin },
   ];
 
   return (
@@ -44,7 +43,7 @@ export default function Contact() {
             <ArrowUpRight className="h-4 w-4" />
           </a>
 
-          <div className="relative mt-10 grid gap-3 sm:grid-cols-3">
+          <div className="relative mx-auto mt-10 grid max-w-xl gap-3 sm:grid-cols-2">
             {channels.map(({ Icon, label, value, href }) => (
               <a
                 key={label}

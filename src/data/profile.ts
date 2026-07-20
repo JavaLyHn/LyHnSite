@@ -48,9 +48,8 @@ export const profile = {
 
   // 联系方式 —— 改成你自己的
   contacts: {
-    email: "haonan.lu@elevatesphere.com",
+    email: "javalyhn@163.com",
     github: "https://github.com/JavaLyHn",
-    linkedin: "https://linkedin.com/in/your-handle",
     resumeUrl: "/resume.pdf", // 把简历 PDF 放到 public/resume.pdf
   },
 };
