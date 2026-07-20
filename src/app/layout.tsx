@@ -16,14 +16,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Haonan Lu · AI Full-Stack Engineer",
   description:
-    "卢浩楠 — AI 全栈开发工程师。专注大模型应用、RAG、Agent 与全栈工程。AI Full-Stack Engineer building LLM products end to end.",
+    "陆昊男 — AI 全栈开发工程师。专注大模型应用、RAG、Agent 与全栈工程。AI Full-Stack Engineer building LLM products end to end.",
   keywords: [
     "AI Engineer",
     "Full-Stack Developer",
     "LLM",
     "RAG",
     "Next.js",
-    "卢浩楠",
+    "陆昊男",
   ],
   openGraph: {
     title: "Haonan Lu · AI Full-Stack Engineer",

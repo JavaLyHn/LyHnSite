@@ -7,7 +7,7 @@ import type { LocalizedString } from "@/lib/i18n";
  * └─────────────────────────────────────────────────────────────┘
  */
 export const profile = {
-  name: { zh: "卢浩楠", en: "Haonan Lu" } satisfies LocalizedString,
+  name: { zh: "陆昊男", en: "Haonan Lu" } satisfies LocalizedString,
 
   // 出现在浏览器标签 / SEO
   initials: "HL",
