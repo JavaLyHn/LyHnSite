@@ -48,11 +48,6 @@ npm run start    # 本地预览生产版本
 },
 ```
 
-### 放简历
-
-把 PDF 放到 `public/resume.pdf`（首屏「下载简历」按钮已指向它）。
-路径可在 `profile.contacts.resumeUrl` 修改。
-
 ### 换主题色
 
 配色集中在 `src/app/globals.css` 顶部的 `:root` 变量：`--accent-cyan`、`--accent-violet`、`--accent-fuchsia`、`--bg` 等，改这几个值即可全站换色。

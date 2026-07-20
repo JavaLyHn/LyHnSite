@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowDown, ArrowUpRight, Download, Mail } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Mail } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { profile } from "@/data/profile";
 import NeuralBackground from "./NeuralBackground";
@@ -101,11 +101,11 @@ export default function Hero() {
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
           <a
-            href={profile.contacts.resumeUrl}
+            href={`mailto:${profile.contacts.email}`}
             className="inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-white/5"
           >
-            <Download className="h-4 w-4" />
-            {t({ zh: "下载简历", en: "Résumé" })}
+            <Mail className="h-4 w-4" />
+            {t({ zh: "联系我", en: "Contact me" })}
           </a>
 
           <div className="ml-1 flex items-center gap-1">

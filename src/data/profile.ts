@@ -50,6 +50,5 @@ export const profile = {
   contacts: {
     email: "javalyhn@163.com",
     github: "https://github.com/JavaLyHn",
-    resumeUrl: "/resume.pdf", // 把简历 PDF 放到 public/resume.pdf
   },
 };
